@@ -1,0 +1,343 @@
+2025-04-30 19:59:03.072 [info] update#setState idle
+2025-04-30 19:59:33.072 [info] update#setState checking for updates
+2025-04-30 19:59:33.148 [info] update#setState idle
+2025-04-30 19:59:42.311 [info] Extension host with pid 945327 exited with code: 0, signal: unknown.
+2025-04-30 19:59:42.335 [error] [UtilityProcess id: 1, type: fileWatcher, pid: 945308]: crashed with code 15 and reason 'killed'
+2025-04-30 20:59:33.074 [info] update#setState checking for updates
+2025-04-30 20:59:33.205 [info] update#setState idle
+2025-04-30 21:59:33.119 [info] update#setState checking for updates
+2025-04-30 21:59:33.261 [info] update#setState idle
+2025-04-30 22:59:33.135 [info] update#setState checking for updates
+2025-04-30 22:59:33.356 [info] update#setState idle
+2025-04-30 23:59:33.183 [info] update#setState checking for updates
+2025-04-30 23:59:33.328 [info] update#setState idle
+2025-05-01 00:59:33.223 [info] update#setState checking for updates
+2025-05-01 00:59:33.378 [info] update#setState idle
+2025-05-01 01:59:33.257 [info] update#setState checking for updates
+2025-05-01 01:59:33.408 [info] update#setState idle
+2025-05-01 02:59:33.298 [info] update#setState checking for updates
+2025-05-01 02:59:33.430 [info] update#setState idle
+2025-05-01 03:59:33.350 [info] update#setState checking for updates
+2025-05-01 03:59:33.483 [info] update#setState idle
+2025-05-01 04:59:33.402 [info] update#setState checking for updates
+2025-05-01 04:59:33.537 [info] update#setState idle
+2025-05-01 05:59:33.446 [info] update#setState checking for updates
+2025-05-01 05:59:33.941 [info] update#setState idle
+2025-05-01 06:59:33.481 [info] update#setState checking for updates
+2025-05-01 06:59:33.606 [info] update#setState idle
+2025-05-01 07:59:33.514 [info] update#setState checking for updates
+2025-05-01 07:59:33.639 [info] update#setState idle
+2025-05-01 08:59:33.568 [info] update#setState checking for updates
+2025-05-01 08:59:33.691 [info] update#setState idle
+2025-05-01 09:59:33.615 [info] update#setState checking for updates
+2025-05-01 09:59:33.801 [info] update#setState idle
+2025-05-01 10:59:33.719 [info] update#setState checking for updates
+2025-05-01 10:59:33.862 [info] update#setState idle
+2025-05-01 11:59:33.762 [info] update#setState checking for updates
+2025-05-01 11:59:33.984 [info] update#setState idle
+2025-05-01 12:59:33.887 [info] update#setState checking for updates
+2025-05-01 12:59:34.087 [info] update#setState idle
+2025-05-01 13:59:33.950 [info] update#setState checking for updates
+2025-05-01 13:59:34.076 [info] update#setState idle
+2025-05-01 14:59:33.986 [info] update#setState checking for updates
+2025-05-01 14:59:34.263 [info] update#setState idle
+2025-05-01 15:59:34.085 [info] update#setState checking for updates
+2025-05-01 15:59:34.226 [info] update#setState idle
+2025-05-01 16:59:34.124 [info] update#setState checking for updates
+2025-05-01 16:59:34.609 [info] update#setState idle
+2025-05-01 17:59:34.171 [info] update#setState checking for updates
+2025-05-01 17:59:34.446 [info] update#setState idle
+2025-05-01 18:59:34.314 [info] update#setState checking for updates
+2025-05-01 18:59:34.679 [info] update#setState idle
+2025-05-01 19:59:34.552 [info] update#setState checking for updates
+2025-05-01 19:59:34.728 [info] update#setState idle
+2025-05-01 20:59:34.594 [info] update#setState checking for updates
+2025-05-01 20:59:34.823 [info] update#setState idle
+2025-05-01 21:59:34.746 [info] update#setState checking for updates
+2025-05-01 21:59:34.862 [info] update#setState idle
+2025-05-01 22:59:34.772 [info] update#setState checking for updates
+2025-05-01 22:59:34.945 [info] update#setState idle
+2025-05-01 23:59:34.830 [info] update#setState checking for updates
+2025-05-01 23:59:34.953 [info] update#setState idle
+2025-05-02 00:59:34.871 [info] update#setState checking for updates
+2025-05-02 00:59:34.998 [info] update#setState idle
+2025-05-02 01:59:34.908 [info] update#setState checking for updates
+2025-05-02 01:59:35.041 [info] update#setState idle
+2025-05-02 02:59:34.963 [info] update#setState checking for updates
+2025-05-02 02:59:35.129 [info] update#setState idle
+2025-05-02 03:59:35.030 [info] update#setState checking for updates
+2025-05-02 03:59:35.187 [info] update#setState idle
+2025-05-02 04:59:35.078 [info] update#setState checking for updates
+2025-05-02 04:59:35.194 [info] update#setState idle
+2025-05-02 05:59:35.119 [info] update#setState checking for updates
+2025-05-02 05:59:35.299 [info] update#setState idle
+2025-05-02 06:59:35.193 [info] update#setState checking for updates
+2025-05-02 06:59:35.507 [info] update#setState idle
+2025-05-02 07:59:35.256 [info] update#setState checking for updates
+2025-05-02 07:59:35.700 [info] update#setState idle
+2025-05-02 08:59:35.599 [info] update#setState checking for updates
+2025-05-02 08:59:35.709 [info] update#setState idle
+2025-05-02 09:59:35.639 [info] update#setState checking for updates
+2025-05-02 09:59:35.764 [info] update#setState idle
+2025-05-02 10:59:35.666 [info] update#setState checking for updates
+2025-05-02 10:59:35.803 [info] update#setState idle
+2025-05-02 11:59:35.726 [info] update#setState checking for updates
+2025-05-02 11:59:35.911 [info] update#setState idle
+2025-05-02 12:59:35.822 [info] update#setState checking for updates
+2025-05-02 12:59:35.941 [info] update#setState idle
+2025-05-02 13:59:35.865 [info] update#setState checking for updates
+2025-05-02 13:59:36.071 [info] update#setState idle
+2025-05-02 14:59:35.934 [info] update#setState checking for updates
+2025-05-02 14:59:36.056 [info] update#setState idle
+2025-05-02 15:59:35.968 [info] update#setState checking for updates
+2025-05-02 15:59:36.141 [info] update#setState idle
+2025-05-02 16:59:36.002 [info] update#setState checking for updates
+2025-05-02 16:59:36.185 [info] update#setState idle
+2025-05-02 17:59:36.075 [info] update#setState checking for updates
+2025-05-02 17:59:36.218 [info] update#setState idle
+2025-05-02 18:59:36.140 [info] update#setState checking for updates
+2025-05-02 18:59:36.259 [info] update#setState idle
+2025-05-02 19:59:36.178 [info] update#setState checking for updates
+2025-05-02 19:59:36.326 [info] update#setState idle
+2025-05-02 20:59:36.210 [info] update#setState checking for updates
+2025-05-02 20:59:36.342 [info] update#setState idle
+2025-05-02 21:59:36.262 [info] update#setState checking for updates
+2025-05-02 21:59:36.447 [info] update#setState idle
+2025-05-02 22:59:36.294 [info] update#setState checking for updates
+2025-05-02 22:59:36.462 [info] update#setState idle
+2025-05-02 23:59:36.322 [info] update#setState checking for updates
+2025-05-02 23:59:36.475 [info] update#setState idle
+2025-05-03 00:59:36.395 [info] update#setState checking for updates
+2025-05-03 00:59:36.516 [info] update#setState idle
+2025-05-03 01:59:36.438 [info] update#setState checking for updates
+2025-05-03 01:59:36.593 [info] update#setState idle
+2025-05-03 02:59:36.510 [info] update#setState checking for updates
+2025-05-03 02:59:36.654 [info] update#setState idle
+2025-05-03 03:59:36.558 [info] update#setState checking for updates
+2025-05-03 03:59:36.739 [info] update#setState idle
+2025-05-03 04:59:36.642 [info] update#setState checking for updates
+2025-05-03 04:59:36.811 [info] update#setState idle
+2025-05-03 05:59:36.706 [info] update#setState checking for updates
+2025-05-03 05:59:37.062 [info] update#setState idle
+2025-05-03 06:59:36.732 [info] update#setState checking for updates
+2025-05-03 06:59:36.868 [info] update#setState idle
+2025-05-03 07:59:36.777 [info] update#setState checking for updates
+2025-05-03 07:59:36.915 [info] update#setState idle
+2025-05-03 08:59:36.818 [info] update#setState checking for updates
+2025-05-03 08:59:36.938 [info] update#setState idle
+2025-05-03 09:59:36.849 [info] update#setState checking for updates
+2025-05-03 09:59:36.966 [info] update#setState idle
+2025-05-03 10:59:36.874 [info] update#setState checking for updates
+2025-05-03 10:59:36.994 [info] update#setState idle
+2025-05-03 11:59:36.914 [info] update#setState checking for updates
+2025-05-03 11:59:37.030 [info] update#setState idle
+2025-05-03 12:59:36.954 [info] update#setState checking for updates
+2025-05-03 12:59:37.101 [info] update#setState idle
+2025-05-03 13:59:37.020 [info] update#setState checking for updates
+2025-05-03 13:59:37.153 [info] update#setState idle
+2025-05-03 14:59:37.076 [info] update#setState checking for updates
+2025-05-03 14:59:37.517 [info] update#setState idle
+2025-05-03 15:59:37.100 [info] update#setState checking for updates
+2025-05-03 15:59:37.240 [info] update#setState idle
+2025-05-03 16:59:37.125 [info] update#setState checking for updates
+2025-05-03 16:59:37.237 [info] update#setState idle
+2025-05-03 17:59:37.160 [info] update#setState checking for updates
+2025-05-03 17:59:37.319 [info] update#setState idle
+2025-05-03 18:59:37.246 [info] update#setState checking for updates
+2025-05-03 18:59:37.409 [info] update#setState idle
+2025-05-03 19:59:37.283 [info] update#setState checking for updates
+2025-05-03 19:59:37.701 [info] update#setState idle
+2025-05-03 20:59:37.489 [info] update#setState checking for updates
+2025-05-03 20:59:37.602 [info] update#setState idle
+2025-05-03 21:59:37.520 [info] update#setState checking for updates
+2025-05-03 21:59:37.719 [info] update#setState idle
+2025-05-03 22:59:37.581 [info] update#setState checking for updates
+2025-05-03 22:59:37.688 [info] update#setState idle
+2025-05-03 23:59:37.611 [info] update#setState checking for updates
+2025-05-03 23:59:37.755 [info] update#setState idle
+2025-05-04 00:59:37.668 [info] update#setState checking for updates
+2025-05-04 00:59:37.837 [info] update#setState idle
+2025-05-04 01:59:37.766 [info] update#setState checking for updates
+2025-05-04 01:59:37.911 [info] update#setState idle
+2025-05-04 02:59:37.831 [info] update#setState checking for updates
+2025-05-04 02:59:38.012 [info] update#setState idle
+2025-05-04 03:59:37.887 [info] update#setState checking for updates
+2025-05-04 03:59:38.004 [info] update#setState idle
+2025-05-04 04:59:37.928 [info] update#setState checking for updates
+2025-05-04 04:59:38.093 [info] update#setState idle
+2025-05-04 05:59:38.012 [info] update#setState checking for updates
+2025-05-04 05:59:38.248 [info] update#setState idle
+2025-05-04 06:59:38.171 [info] update#setState checking for updates
+2025-05-04 06:59:38.280 [info] update#setState idle
+2025-05-04 07:59:38.212 [info] update#setState checking for updates
+2025-05-04 07:59:38.394 [info] update#setState idle
+2025-05-04 08:59:38.314 [info] update#setState checking for updates
+2025-05-04 08:59:38.436 [info] update#setState idle
+2025-05-04 09:59:38.352 [info] update#setState checking for updates
+2025-05-04 09:59:38.467 [info] update#setState idle
+2025-05-04 10:59:38.396 [info] update#setState checking for updates
+2025-05-04 10:59:38.513 [info] update#setState idle
+2025-05-04 11:59:38.437 [info] update#setState checking for updates
+2025-05-04 11:59:38.535 [info] update#setState idle
+2025-05-04 12:59:38.459 [info] update#setState checking for updates
+2025-05-04 12:59:38.594 [info] update#setState idle
+2025-05-04 13:59:38.517 [info] update#setState checking for updates
+2025-05-04 13:59:38.622 [info] update#setState idle
+2025-05-04 14:59:38.546 [info] update#setState checking for updates
+2025-05-04 14:59:38.653 [info] update#setState idle
+2025-05-04 15:59:38.574 [info] update#setState checking for updates
+2025-05-04 15:59:38.694 [info] update#setState idle
+2025-05-04 16:59:38.613 [info] update#setState checking for updates
+2025-05-04 16:59:38.754 [info] update#setState idle
+2025-05-04 17:59:38.665 [info] update#setState checking for updates
+2025-05-04 17:59:38.786 [info] update#setState idle
+2025-05-04 18:59:38.704 [info] update#setState checking for updates
+2025-05-04 18:59:38.895 [info] update#setState idle
+2025-05-04 19:59:38.744 [info] update#setState checking for updates
+2025-05-04 19:59:38.863 [info] update#setState idle
+2025-05-04 20:59:38.791 [info] update#setState checking for updates
+2025-05-04 20:59:39.144 [info] update#setState idle
+2025-05-04 21:59:38.820 [info] update#setState checking for updates
+2025-05-04 21:59:38.931 [info] update#setState idle
+2025-05-04 22:59:38.853 [info] update#setState checking for updates
+2025-05-04 22:59:38.949 [info] update#setState idle
+2025-05-04 23:59:38.878 [info] update#setState checking for updates
+2025-05-04 23:59:39.032 [info] update#setState idle
+2025-05-05 00:59:38.946 [info] update#setState checking for updates
+2025-05-05 00:59:39.070 [info] update#setState idle
+2025-05-05 01:59:38.985 [info] update#setState checking for updates
+2025-05-05 01:59:39.110 [info] update#setState idle
+2025-05-05 02:59:39.039 [info] update#setState checking for updates
+2025-05-05 02:59:39.188 [info] update#setState idle
+2025-05-05 03:59:39.102 [info] update#setState checking for updates
+2025-05-05 03:59:39.210 [info] update#setState idle
+2025-05-05 04:59:39.137 [info] update#setState checking for updates
+2025-05-05 04:59:39.262 [info] update#setState idle
+2025-05-05 05:59:39.185 [info] update#setState checking for updates
+2025-05-05 05:59:39.302 [info] update#setState idle
+2025-05-05 06:59:39.226 [info] update#setState checking for updates
+2025-05-05 06:59:39.544 [info] update#setState idle
+2025-05-05 07:59:39.466 [info] update#setState checking for updates
+2025-05-05 07:59:39.583 [info] update#setState idle
+2025-05-05 08:59:39.504 [info] update#setState checking for updates
+2025-05-05 08:59:39.609 [info] update#setState idle
+2025-05-05 09:59:39.537 [info] update#setState checking for updates
+2025-05-05 09:59:39.636 [info] update#setState idle
+2025-05-05 10:59:39.566 [info] update#setState checking for updates
+2025-05-05 10:59:39.671 [info] update#setState idle
+2025-05-05 11:59:39.594 [info] update#setState checking for updates
+2025-05-05 11:59:39.716 [info] update#setState idle
+2025-05-05 12:59:39.643 [info] update#setState checking for updates
+2025-05-05 12:59:39.751 [info] update#setState idle
+2025-05-05 13:59:39.678 [info] update#setState checking for updates
+2025-05-05 13:59:39.776 [info] update#setState idle
+2025-05-05 14:59:39.702 [info] update#setState checking for updates
+2025-05-05 14:59:39.939 [info] update#setState idle
+2025-05-05 15:59:39.758 [info] update#setState checking for updates
+2025-05-05 15:59:39.903 [info] update#setState idle
+2025-05-05 16:59:39.818 [info] update#setState checking for updates
+2025-05-05 16:59:39.943 [info] update#setState idle
+2025-05-05 17:59:39.847 [info] update#setState checking for updates
+2025-05-05 17:59:40.110 [info] update#setState idle
+2025-05-05 18:59:39.918 [info] update#setState checking for updates
+2025-05-05 18:59:40.055 [info] update#setState idle
+2025-05-05 19:59:39.958 [info] update#setState checking for updates
+2025-05-05 19:59:40.107 [info] update#setState idle
+2025-05-05 20:59:39.998 [info] update#setState checking for updates
+2025-05-05 20:59:40.144 [info] update#setState idle
+2025-05-05 21:59:40.031 [info] update#setState checking for updates
+2025-05-05 21:59:40.171 [info] update#setState idle
+2025-05-05 22:59:40.054 [info] update#setState checking for updates
+2025-05-05 22:59:40.168 [info] update#setState idle
+2025-05-05 23:59:40.082 [info] update#setState checking for updates
+2025-05-05 23:59:40.199 [info] update#setState idle
+2025-05-06 00:59:40.125 [info] update#setState checking for updates
+2025-05-06 00:59:40.251 [info] update#setState idle
+2025-05-06 01:59:40.164 [info] update#setState checking for updates
+2025-05-06 01:59:40.301 [info] update#setState idle
+2025-05-06 02:59:40.218 [info] update#setState checking for updates
+2025-05-06 02:59:40.332 [info] update#setState idle
+2025-05-06 03:59:40.251 [info] update#setState checking for updates
+2025-05-06 03:59:40.416 [info] update#setState idle
+2025-05-06 04:59:40.336 [info] update#setState checking for updates
+2025-05-06 04:59:40.596 [info] update#setState idle
+2025-05-06 05:59:40.506 [info] update#setState checking for updates
+2025-05-06 05:59:40.793 [info] update#setState idle
+2025-05-06 06:59:40.709 [info] update#setState checking for updates
+2025-05-06 06:59:40.830 [info] update#setState idle
+2025-05-06 07:59:40.750 [info] update#setState checking for updates
+2025-05-06 07:59:40.950 [info] update#setState idle
+2025-05-06 08:59:40.846 [info] update#setState checking for updates
+2025-05-06 08:59:40.976 [info] update#setState idle
+2025-05-06 09:59:40.886 [info] update#setState checking for updates
+2025-05-06 09:59:40.997 [info] update#setState idle
+2025-05-06 10:59:40.907 [info] update#setState checking for updates
+2025-05-06 10:59:41.042 [info] update#setState idle
+2025-05-06 11:59:40.950 [info] update#setState checking for updates
+2025-05-06 11:59:41.080 [info] update#setState idle
+2025-05-06 12:59:40.990 [info] update#setState checking for updates
+2025-05-06 12:59:41.133 [info] update#setState idle
+2025-05-06 13:59:41.042 [info] update#setState checking for updates
+2025-05-06 13:59:41.173 [info] update#setState idle
+2025-05-06 14:59:41.074 [info] update#setState checking for updates
+2025-05-06 14:59:41.223 [info] update#setState idle
+2025-05-06 15:59:41.120 [info] update#setState checking for updates
+2025-05-06 15:59:41.239 [info] update#setState idle
+2025-05-06 16:59:41.150 [info] update#setState checking for updates
+2025-05-06 16:59:41.270 [info] update#setState idle
+2025-05-06 17:59:41.180 [info] update#setState checking for updates
+2025-05-06 17:59:41.286 [info] update#setState idle
+2025-05-06 18:59:41.209 [info] update#setState checking for updates
+2025-05-06 18:59:41.332 [info] update#setState idle
+2025-05-06 19:59:41.226 [info] update#setState checking for updates
+2025-05-06 19:59:41.463 [info] update#setState idle
+2025-05-06 20:59:41.274 [info] update#setState checking for updates
+2025-05-06 20:59:41.413 [info] update#setState idle
+2025-05-06 21:59:41.326 [info] update#setState checking for updates
+2025-05-06 21:59:41.460 [info] update#setState idle
+2025-05-06 22:59:41.370 [info] update#setState checking for updates
+2025-05-06 22:59:41.574 [info] update#setState idle
+2025-05-06 23:59:41.498 [info] update#setState checking for updates
+2025-05-06 23:59:41.667 [info] update#setState idle
+2025-05-07 00:59:41.534 [info] update#setState checking for updates
+2025-05-07 00:59:41.687 [info] update#setState idle
+2025-05-07 01:59:41.612 [info] update#setState checking for updates
+2025-05-07 01:59:42.070 [info] update#setState idle
+2025-05-07 02:59:41.653 [info] update#setState checking for updates
+2025-05-07 02:59:41.771 [info] update#setState idle
+2025-05-07 03:59:41.680 [info] update#setState checking for updates
+2025-05-07 03:59:41.850 [info] update#setState idle
+2025-05-07 04:59:41.736 [info] update#setState checking for updates
+2025-05-07 04:59:41.842 [info] update#setState idle
+2025-05-07 05:59:41.766 [info] update#setState checking for updates
+2025-05-07 05:59:41.893 [info] update#setState idle
+2025-05-07 06:59:41.818 [info] update#setState checking for updates
+2025-05-07 06:59:42.091 [info] update#setState idle
+2025-05-07 07:59:41.929 [info] update#setState checking for updates
+2025-05-07 07:59:42.046 [info] update#setState idle
+2025-05-07 08:59:41.970 [info] update#setState checking for updates
+2025-05-07 08:59:42.093 [info] update#setState idle
+2025-05-07 09:59:42.016 [info] update#setState checking for updates
+2025-05-07 09:59:42.139 [info] update#setState idle
+2025-05-07 10:59:42.058 [info] update#setState checking for updates
+2025-05-07 10:59:42.288 [info] update#setState idle
+2025-05-07 11:59:42.208 [info] update#setState checking for updates
+2025-05-07 11:59:42.336 [info] update#setState idle
+2025-05-07 12:59:42.254 [info] update#setState checking for updates
+2025-05-07 12:59:42.416 [info] update#setState idle
+2025-05-07 13:59:42.290 [info] update#setState checking for updates
+2025-05-07 13:59:42.441 [info] update#setState idle
+2025-05-07 14:59:42.355 [info] update#setState checking for updates
+2025-05-07 14:59:42.576 [info] update#setState idle
+2025-05-07 15:59:42.393 [info] update#setState checking for updates
+2025-05-07 15:59:42.763 [info] update#setState idle
+2025-05-07 16:59:42.451 [info] update#setState checking for updates
+2025-05-07 16:59:43.056 [info] update#setState idle
+2025-05-07 17:59:42.878 [info] update#setState checking for updates
+2025-05-07 17:59:43.067 [info] update#setState idle
+2025-05-07 18:59:42.976 [info] update#setState checking for updates
+2025-05-07 18:59:43.227 [info] update#setState idle
+2025-05-07 19:59:43.000 [info] update#setState checking for updates
+2025-05-07 19:59:43.137 [info] update#setState idle
+2025-05-07 20:59:43.061 [info] update#setState checking for updates
+2025-05-07 20:59:43.213 [info] update#setState idle
