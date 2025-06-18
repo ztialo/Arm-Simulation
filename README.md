@@ -1,7 +1,8 @@
 # Arm Simulation Environment Set Up
 This repository is designed for setting up an environment for training robotics arm to grab objects in Isaac Sim. The goal is to guide through developers to design their own task for the arm to train using examples files.
 
-![Workspace Demo](photos/workspace-clean.png)
+![Workspace Demo](photos/environment-example1.png)
+<img src="photos/environment-example1.png" alt="Task Demo" width="400"/>
 
 # How to run
 Find the `isaaclab.sh` file in your `IssacSim -> IssacLab` folder, it could be stored somewhere else. In the same directory where you store the `isaaclab.sh` file, run:
