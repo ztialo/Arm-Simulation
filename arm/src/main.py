@@ -88,7 +88,8 @@ def main():
         desk_folder_path = "/home/zdli/Arm-Simulation/arm/asset/workDesk_v1",
         desk_pose = desk1_pose,
         desk_dynamic=False,
-        desk_mass=40.0
+        desk_mass=40.0,
+        piper_usd = "/home/zdli/Arm-Simulation/arm/piper_description/urdf/piper_description_v100_camera.usd"
     )
 
     scene.build()

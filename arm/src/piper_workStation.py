@@ -15,6 +15,7 @@ class WorkStationSetUp:
                  root_path="/World/Workstation",
                  desk_dynamic=False,
                  desk_mass=30.0,
+                 piper_usd = str,
                 
                  desk_pose=((0.0, 0.0, 0.65), (0.0, 0.0, 0.0)),
                  surface_pose=((0.0, 0.0, 0.724), (0.0, 0.0, 0.0)),
@@ -23,6 +24,7 @@ class WorkStationSetUp:
         self._desk_folder_path = desk_folder_path
         self._root_path = Sdf.Path(root_path)
         self._stage = omni.usd.get_context().get_stage()
+        self._piper_usd = piper_usd
 
         self._desk_pose = desk_pose
         self._surface_pose = surface_pose
@@ -40,6 +42,7 @@ class WorkStationSetUp:
         self._ensure_root()
         self._add_desk()
         self._add_scene()
+        self._add_arms()
 
         # subscribe to physics ticks (runs every frame)
         if self._tick_sub is None:
@@ -106,9 +109,19 @@ class WorkStationSetUp:
             for child in p.GetChildren():
                 stack.append(child)
 
-    def _add_arm(self):
-        
+    def _add_arms(self):
+        left_piper_root = UsdGeom.Xform.Define(self._stage, self._root_path.GetPath().AppendChild("Left_Arm"))
+        right_piper_root = UsdGeom.Xform.Define(self._stage, self._root_path.GetPath().AppendChild("Right_Arm"))
 
+        # add usd referenece to prim
+        left_piper_prim = left_piper_root.GetPrim()
+        left_piper_prim.GetReferences().AddReferences(self._piper_usd)
+        right_piper_prim = right_piper_root.GetPrim()
+        right_piper_prim.GetReferences().AddReferences(self._piper_usd)
+
+        # make sure they are articulated
+        UsdPhysics.ArticulationRootAPI.Apply(left_piper_prim)
+        UsdPhysics.ArticulationRootAPI.Apply(right_piper_prim)
 
     def _add_scene(self):
         #Ground-plane
