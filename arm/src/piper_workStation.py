@@ -106,6 +106,9 @@ class WorkStationSetUp:
             for child in p.GetChildren():
                 stack.append(child)
 
+    def _add_arm(self):
+        
+
 
     def _add_scene(self):
         #Ground-plane
