@@ -21,12 +21,12 @@ simulation_app = app_launcher.app
 import piper_workStation
 import task_setUp
 import isaacsim.core.utils.prims as prim_utils
+import omni.kit.app
+import carb.input
 
 import isaaclab.sim as sim_utils
 from isaaclab.utils.assets import ISAAC_NUCLEUS_DIR
-import omni
-from pxr import Usd, UsdLux, UsdGeom, Sdf, Gf, Tf, UsdPhysics
-from omni.physx.scripts import utils
+
 
 # def setup_scene():
 #     # Add physics
@@ -76,15 +76,16 @@ def main():
     # Initialize the simulation context
     sim_cfg = sim_utils.SimulationCfg(dt=0.01, device=args_cli.device)
     sim = sim_utils.SimulationContext(sim_cfg)
+    
     # Set main camera
     sim.set_camera_view([2.0, 0.0, 2.5], [-0.5, 0.0, 0.5])
 
     # initialize desk position
-    desk1_pose = ((0.0, 0.0, 0.65), (0.0, 0.0, 90.0))
+    desk1_pose = ((0.0, 0.0, 0.01), (0.0, 0.0, 90.0))
 
     # Calling WorkStationSetUp to set up the scene
     scene = piper_workStation.WorkStationSetUp(
-        desk_usd = "/home/zdli/Arm-Simulation/arm/objects/workDesk_new.usd",
+        desk_folder_path = "/home/zdli/Arm-Simulation/arm/asset/workDesk_v1",
         desk_pose = desk1_pose,
         desk_dynamic=False,
         desk_mass=40.0
@@ -93,10 +94,10 @@ def main():
     scene.build()
 
     # change the task folder path base on the task that you want to run
-    task = task_setUp(
+    task = task_setUp.TaskSetUp(
         task_folder_path = "/home/zdli/Arm-Simulation/arm/tasks/Pickup_Pens", 
         desk_pose = desk1_pose,
-        desktop_height = desk1_pose[0][2] + 0.21  # 0.86 <- desktop height
+        desktop_height = desk1_pose[0][2] + 0.81  # 0.86 <- approximate desktop height
     )
     task.build()
 
@@ -105,10 +106,23 @@ def main():
     # Now we are ready!
     print("[INFO]: Setup complete...")
 
+    # keyboard input reset handler
+    app = omni.kit.app.get_app()
+    input = carb.input.acquire_input_interface()
+
+    def on_update(e):
+        if input.is_key_down(carb.input.KeyboardInput.NUMPAD_1):
+            print("NumPad 1 pressed -> resetting simulation")
+            task.build()
+            sim.reset()
+
+    app.get_update_event_stream().create_subscription_to_pop(on_update, name="key-check")
+
     # Simulate physics
     while simulation_app.is_running():
         # perform step
         sim.step()
+
 
 
 if __name__ == "__main__":
