@@ -92,11 +92,11 @@ class TaskSetUp:
                 if not collision or not collision.IsApplied():
                     UsdPhysics.CollisionAPI.Apply(p)
 
-                # meshCollision = PhysxSchema.PhysxSDFMeshCollisionAPI.Apply(p)
-                # meshCollision.CreateSdfResolutionAttr().Set(256)
-
-                # # set PhysX collision approximation as convex instead of triangle mesh 
-                # PhysxSchema.PhysxConvexDecompositionCollisionAPI.Apply(p)
+                # Due to triangle mesh can not be dynamic, we need to simplyfy the collision to either convex hull, convex decomposition, or SDF
+                if t == "Mesh":
+                    # print(f"prim: {p} with type: {t}")
+                    meshCollisionAPI = UsdPhysics.MeshCollisionAPI.Apply(p)
+                    meshCollisionAPI.GetApproximationAttr().Set(UsdPhysics.Tokens.convexDecomposition)
 
             # apply collision to prim's child if there are any
             for child in p.GetChildren():

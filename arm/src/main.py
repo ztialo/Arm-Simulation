@@ -23,50 +23,10 @@ import task_setUp
 import isaacsim.core.utils.prims as prim_utils
 import omni.kit.app
 import carb.input
+from pxr import UsdShade
 
 import isaaclab.sim as sim_utils
 from isaaclab.utils.assets import ISAAC_NUCLEUS_DIR
-
-
-# def setup_scene():
-#     # Add physics
-#     stage = omni.usd.get_context().get_stage()
-#     # Add a physics scene prim to stage
-#     # scene = UsdPhysics.Scene.Define(stage, Sdf.Path("/World/physicsScene"))
-#     # #Set gravity vector
-#     # scene.CreateGravityDirectionAttr().Set(Gf.Vec3f(0.0, 0.0, -1.0))
-#     # scene.CreateGravityMagnitudeAttr().Set(981.0)
-
-#     """Workspace set up with ground plane, light, and table"""
-#     #Ground-plane
-#     cfg_ground = sim_utils.GroundPlaneCfg()
-#     cfg_ground.func("/World/defaultGroundPlane", cfg_ground)
-
-#     #spawn distant light
-#     cfg_light_distant = sim_utils.DistantLightCfg(
-#         intensity=3000.0,
-#         color=(0.75,0.75,0.75),
-#     )
-#     cfg_light_distant.func("/World/lightDistant", cfg_light_distant, translation=(1,0,10))
-
-#     #spawn a workdesk next from converted USD file
-#     desk_cfg = sim_utils.UsdFileCfg(usd_path="/home/zdli/Arm-Simulation/arm/objects/workDesk_new.usd") # change this path base on ur machine accordingly
-#     desk_cfg.func("/World/Workspace/Desk", desk_cfg, translation=(0.0, 0.0, 0.65)) # 0.721-0.65 = 
-
-#     #adding physics to workdesk
-#     desk_prim = stage.GetPrimAtPath("/World/Workspace/Desk")
-#     utils.setRigidBody(desk_prim, "convexDecomposition", True)
-#     # UsdPhysics.RigidBodyAPI.Apply(desk_prim)
-#     UsdPhysics.CollisionAPI.Apply(desk_prim)
-#     UsdPhysics.MassAPI.Apply(desk_prim)
-
-#     # CHANGE piper arm into URDF 
-#     #spawn two piper arm in scene
-#     leftArm_cfg = sim_utils.UsdFileCfg(usd_path="/home/zdli/Arm-Simulation/arm/piper_description/urdf/piper_description/piper_description.usd")
-#     leftArm_cfg.func("/World/Workspace/LeftArm", leftArm_cfg, translation=(-0.25, -0.5, 0.794))
-
-#     rightArm_cfg = sim_utils.UsdFileCfg(usd_path="/home/zdli/Arm-Simulation/arm/piper_description/urdf/piper_description/piper_description.usd")
-#     rightArm_cfg.func("/World/Workspace/RightArm", rightArm_cfg, translation=(-0.25, 0.11, 0.794))
 
 
 
@@ -89,7 +49,7 @@ def main():
         desk_pose = desk1_pose,
         desk_dynamic=False,
         desk_mass=40.0,
-        piper_usd = "/home/zdli/Arm-Simulation/arm/piper_description/urdf/piper_description_v100_camera.usd"
+        piper_usd = "/home/zdli/Arm-Simulation/arm/piper_description/urdf/piper_description_v100_camera/piper_description_v100_camera.usd"
     )
 
     scene.build()

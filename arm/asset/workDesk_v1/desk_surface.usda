@@ -1,11 +1,11 @@
 #usda 1.0
 (
-    defaultPrim = "World"
+    defaultPrim = "DeskSurface"
     metersPerUnit = 1
     upAxis = "Y"
 )
 
-def Xform "World" (
+def Xform "DeskSurface" (
     kind = "component"
 )
 {
@@ -16,11 +16,11 @@ def Xform "World" (
 
     def Scope "Looks"
     {
-        def Material "DeskMaterial"
+        def Material "desk_surface_Material"
         {
-            token outputs:mdl:displacement.connect = </World/Looks/DeskMaterial/DeskShader.outputs:out>
-            token outputs:mdl:surface.connect = </World/Looks/DeskMaterial/DeskShader.outputs:out>
-            token outputs:mdl:volume.connect = </World/Looks/DeskMaterial/DeskShader.outputs:out>
+            token outputs:mdl:displacement.connect = </DeskSurface/Looks/desk_surface_Material/DeskShader.outputs:out>
+            token outputs:mdl:surface.connect = </DeskSurface/Looks/desk_surface_Material/DeskShader.outputs:out>
+            token outputs:mdl:volume.connect = </DeskSurface/Looks/desk_surface_Material/DeskShader.outputs:out>
 
             def Shader "DeskShader"
             {
@@ -163,7 +163,7 @@ def Xform "World" (
             float3[] extent = [(-0.4572, -0.6096, 0), (0.4572, 0.6096, 0.03)]
             int[] faceVertexCounts = [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
             int[] faceVertexIndices = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35]
-            rel material:binding = </World/Looks/DeskMaterial>
+            rel material:binding = </DeskSurface/Looks/desk_surface_Material>
             normal3f[] normals = [(0, 0, -1), (0, 0, -1), (0, 0, -1), (0, -0, -1), (0, -0, -1), (0, -0, -1), (-0, 0, 1), (-0, 0, 1), (-0, 0, 1), (-0, -0, 1), (-0, -0, 1), (-0, -0, 1), (-0, -1, -0), (-0, -1, -0), (-0, -1, -0), (-0, -1, -0), (-0, -1, -0), (-0, -1, -0), (-1, 0, 0), (-1, 0, 0), (-1, 0, 0), (-1, -0, -0), (-1, -0, -0), (-1, -0, -0), (1, 0, 0), (1, 0, 0), (1, 0, 0), (1, -0, -0), (1, -0, -0), (1, -0, -0), (-0, 1, 0), (-0, 1, 0), (-0, 1, 0), (-0, 1, 0), (-0, 1, 0), (-0, 1, 0)] (
                 interpolation = "faceVarying"
             )

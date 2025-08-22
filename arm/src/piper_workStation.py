@@ -8,6 +8,7 @@ import numpy as np
 import omni.kit.app, omni.usd
 import isaaclab.sim as sim_utils
 from pxr import Gf, Sdf, UsdGeom, PhysxSchema, UsdPhysics, UsdShade
+from isaacsim.core.prims import SingleArticulation
 
 class WorkStationSetUp:
     def __init__(self,
@@ -20,7 +21,9 @@ class WorkStationSetUp:
                  desk_pose=((0.0, 0.0, 0.65), (0.0, 0.0, 0.0)),
                  surface_pose=((0.0, 0.0, 0.724), (0.0, 0.0, 0.0)),
                  legs_pose=((-0.2, 0.04, 0.65), (0.0, 0.0, 0.0)),
-                 frame_pose= ((0.0, 0.0, 0.754), (0.0, 0.0, -90.0))):
+                 frame_pose= ((0.0, 0.0, 0.754), (0.0, 0.0, -90.0)),
+                 left_arm_pose= ((-0.3, -0.22, 0.805), (0.0, 0.0, 90.0)),
+                 right_arm_pose= ((0.3, -0.22, 0.805), (0.0, 0.0, 90.0))):
         self._desk_folder_path = desk_folder_path
         self._root_path = Sdf.Path(root_path)
         self._stage = omni.usd.get_context().get_stage()
@@ -30,6 +33,8 @@ class WorkStationSetUp:
         self._surface_pose = surface_pose
         self._legs_pose = legs_pose
         self._frame_pose = frame_pose
+        self._left_arm_pose = left_arm_pose
+        self._right_arm_pose = right_arm_pose
 
         self._desk_dynamic = desk_dynamic
         self._desk_mass = desk_mass
@@ -97,6 +102,13 @@ class WorkStationSetUp:
                 m.CreateMassAttr(self._desk_mass)
 
             # bind materials
+            material_path = str(asset_xf.GetPath()) + "/Looks/" + usda_file.stem + "_Material"
+            mesh_path = asset_xf.GetPath().AppendPath("node_").AppendPath("mesh_")
+            mesh_prim = self._stage.GetPrimAtPath(mesh_path)
+            print(material_path)
+            material = UsdShade.Material.Get(self._stage, material_path)
+            UsdShade.MaterialBindingAPI(mesh_prim).Bind(material)
+
 
     def _apply_collision_recursive(self, prim):
         stack = [prim]
@@ -110,18 +122,32 @@ class WorkStationSetUp:
                 stack.append(child)
 
     def _add_arms(self):
-        left_piper_root = UsdGeom.Xform.Define(self._stage, self._root_path.GetPath().AppendChild("Left_Arm"))
-        right_piper_root = UsdGeom.Xform.Define(self._stage, self._root_path.GetPath().AppendChild("Right_Arm"))
+        left_piper_root = UsdGeom.Xform.Define(self._stage, self._root_path.AppendChild("Left_Arm"))
+        right_piper_root = UsdGeom.Xform.Define(self._stage, self._root_path.AppendChild("Right_Arm"))
 
         # add usd referenece to prim
         left_piper_prim = left_piper_root.GetPrim()
-        left_piper_prim.GetReferences().AddReferences(self._piper_usd)
+        left_piper_prim.GetReferences().AddReference(self._piper_usd)
         right_piper_prim = right_piper_root.GetPrim()
-        right_piper_prim.GetReferences().AddReferences(self._piper_usd)
+        right_piper_prim.GetReferences().AddReference(self._piper_usd)
 
-        # make sure they are articulated
-        UsdPhysics.ArticulationRootAPI.Apply(left_piper_prim)
-        UsdPhysics.ArticulationRootAPI.Apply(right_piper_prim)
+        # wrap the prim as an articulation
+        SingleArticulation(str(left_piper_root.GetPath()), name = "Left_piper")
+        SingleArticulation(str(left_piper_root.GetPath()), name = "Right_piper")
+
+        # pose the arms 
+        (lx, ly, lz), (l_roll, l_pitch, l_yaw) = self._left_arm_pose
+        (rx, ry, rz), (r_roll, r_pitch, r_yaw) = self._right_arm_pose
+
+        lR = Gf.Rotation(Gf.Vec3d(1,0,0), l_roll) * Gf.Rotation(Gf.Vec3d(0,1,0), l_pitch) * Gf.Rotation(Gf.Vec3d(0,0,1), l_yaw)
+        lq = lR.GetQuat()
+        left_piper_root.GetTranslateOp().Set(Gf.Vec3f(lx, ly, lz))
+        left_piper_root.GetOrientOp().Set(Gf.Quatd(lq.GetReal(), *lq.GetImaginary()))
+
+        rR = Gf.Rotation(Gf.Vec3d(1,0,0), r_roll) * Gf.Rotation(Gf.Vec3d(0,1,0), r_pitch) * Gf.Rotation(Gf.Vec3d(0,0,1), r_yaw)
+        rq = rR.GetQuat()
+        right_piper_root.GetTranslateOp().Set(Gf.Vec3f(rx, ry, rz))
+        right_piper_root.GetOrientOp().Set(Gf.Quatd(rq.GetReal(), *rq.GetImaginary()))
 
     def _add_scene(self):
         #Ground-plane
