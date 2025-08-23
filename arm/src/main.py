@@ -4,6 +4,7 @@
 
 import argparse
 import sys
+from pathlib import Path
 sys.path.append("/home/zdli/Arm-Simulation/arm/src")
 
 from isaaclab.app import AppLauncher
@@ -23,7 +24,7 @@ import task_setUp
 import isaacsim.core.utils.prims as prim_utils
 import omni.kit.app
 import carb.input
-from pxr import UsdShade
+from pxr import UsdShade, Sdf
 
 import isaaclab.sim as sim_utils
 from isaaclab.utils.assets import ISAAC_NUCLEUS_DIR
@@ -32,6 +33,8 @@ from isaaclab.utils.assets import ISAAC_NUCLEUS_DIR
 
 def main():
     """Main function."""
+    print("Name of the task: ")
+    task_folder = sys.stdin.readline().strip()
 
     # Initialize the simulation context
     sim_cfg = sim_utils.SimulationCfg(dt=0.01, device=args_cli.device)
@@ -43,24 +46,29 @@ def main():
     # initialize desk position
     desk1_pose = ((0.0, 0.0, 0.01), (0.0, 0.0, 90.0))
 
+    desk_folder_path = (Path(__file__).resolve().parents[1] / "asset" / "workDesk_v1")
+    piper_usd_path = (Path(__file__).resolve().parents[1] / "piper_description"/ "urdf"/ "piper_description_v100_camera"/ "piper_description_v100_camera.usd")
+    task_folder_path = (Path(__file__).resolve().parents[1] / "tasks" / f"{task_folder}")
+
     # Calling WorkStationSetUp to set up the scene
     scene = piper_workStation.WorkStationSetUp(
-        desk_folder_path = "/home/zdli/Arm-Simulation/arm/asset/workDesk_v1",
+        desk_folder_path = str(desk_folder_path),
         desk_pose = desk1_pose,
         desk_dynamic=False,
         desk_mass=40.0,
-        piper_usd = "/home/zdli/Arm-Simulation/arm/piper_description/urdf/piper_description_v100_camera/piper_description_v100_camera.usd"
+        piper_usd = str(piper_usd_path)
     )
 
     scene.build()
 
     # change the task folder path base on the task that you want to run
     task = task_setUp.TaskSetUp(
-        task_folder_path = "/home/zdli/Arm-Simulation/arm/tasks/Pickup_Pens", 
+        task_folder_path = str(task_folder_path), 
         desk_pose = desk1_pose,
         desktop_height = desk1_pose[0][2] + 0.81  # 0.86 <- approximate desktop height
     )
     task.build()
+
 
     # Play the simulator
     sim.reset()

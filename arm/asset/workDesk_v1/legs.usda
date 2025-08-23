@@ -18,11 +18,11 @@ def Xform "Legs" (
     {
         def Material "legs_Material"
         {
-            token outputs:mdl:displacement.connect = </Legs/Looks/legs_Material/LegsShader.outputs:out>
-            token outputs:mdl:surface.connect = </Legs/Looks/legs_Material/LegsShader.outputs:out>
-            token outputs:mdl:volume.connect = </Legs/Looks/legs_Material/LegsShader.outputs:out>
+            token outputs:mdl:displacement.connect = </Legs/Looks/legs_Material/legs_Shader.outputs:out>
+            token outputs:mdl:surface.connect = </Legs/Looks/legs_Material/legs_Shader.outputs:out>
+            token outputs:mdl:volume.connect = </Legs/Looks/legs_Material/legs_Shader.outputs:out>
 
-            def Shader "LegsShader"
+            def Shader "legs_Shader"
             {
                 uniform token info:implementationSource = "sourceAsset"
                 uniform asset info:mdl:sourceAsset = @OmniPBR.mdl@
@@ -37,6 +37,9 @@ def Xform "Legs" (
                     }
                     displayGroup = "Albedo"
                     displayName = "Base Color"
+                    doc = "This is the albedo base color"
+                    hidden = false
+                    renderType = "color"
                 )
                 color3f inputs:emissive_color = (1, 1, 1) (
                     customData = {

@@ -7,7 +7,7 @@ from pathlib import Path
 import numpy as np
 import omni.kit.app, omni.usd
 import isaaclab.sim as sim_utils
-from pxr import Gf, Sdf, UsdGeom, PhysxSchema, UsdPhysics, UsdShade
+from pxr import Gf, Usd, Sdf, UsdGeom, PhysxSchema, UsdPhysics, UsdShade
 from isaacsim.core.prims import SingleArticulation
 
 class WorkStationSetUp:
@@ -53,6 +53,7 @@ class WorkStationSetUp:
         if self._tick_sub is None:
             self.tick_sub = self._app.get_update_event_stream() \
                 .create_subscription_to_pop(self._on_update, name="workstation-tick")
+
 
     def _ensure_root(self):
         UsdGeom.Xform.Define(self._stage, self._root_path)
@@ -100,15 +101,7 @@ class WorkStationSetUp:
                 UsdPhysics.RigidBodyAPI.Apply(root_prim)
                 m = UsdPhysics.MassAPI.Apply(root_prim)
                 m.CreateMassAttr(self._desk_mass)
-
-            # bind materials
-            material_path = str(asset_xf.GetPath()) + "/Looks/" + usda_file.stem + "_Material"
-            mesh_path = asset_xf.GetPath().AppendPath("node_").AppendPath("mesh_")
-            mesh_prim = self._stage.GetPrimAtPath(mesh_path)
-            print(material_path)
-            material = UsdShade.Material.Get(self._stage, material_path)
-            UsdShade.MaterialBindingAPI(mesh_prim).Bind(material)
-
+            
 
     def _apply_collision_recursive(self, prim):
         stack = [prim]
@@ -169,7 +162,6 @@ class WorkStationSetUp:
         simpleRoom_file_path = "/home/zdli/Arm-Simulation/arm/asset/simple_room_wNoTable.usda"
         room_prim.GetReferences().AddReference(simpleRoom_file_path)
         room_xf.AddTranslateOp().Set(Gf.Vec3f(0.0, 0.0, 0.78))
-
 
     def _on_update(self, _e):
         # Called every frame by Kit. If you need fixed-Δt logic, you can accumulate time here.

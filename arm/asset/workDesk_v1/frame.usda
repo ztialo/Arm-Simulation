@@ -18,11 +18,11 @@ def Xform "Frame" (
     {
         def Material "frame_Material"
         {
-            token outputs:mdl:displacement.connect = </Frame/Looks/frame_Material/FrameShader.outputs:out>
-            token outputs:mdl:surface.connect = </Frame/Looks/frame_Material/FrameShader.outputs:out>
-            token outputs:mdl:volume.connect = </Frame/Looks/frame_Material/FrameShader.outputs:out>
+            token outputs:mdl:displacement.connect = </Frame/Looks/frame_Material/frame_Shader.outputs:out>
+            token outputs:mdl:surface.connect = </Frame/Looks/frame_Material/frame_Shader.outputs:out>
+            token outputs:mdl:volume.connect = </Frame/Looks/frame_Material/frame_Shader.outputs:out>
 
-            def Shader "FrameShader"
+            def Shader "frame_Shader"
             {
                 uniform token info:implementationSource = "sourceAsset"
                 uniform asset info:mdl:sourceAsset = @OmniPBR.mdl@
@@ -37,6 +37,9 @@ def Xform "Frame" (
                     }
                     displayGroup = "Albedo"
                     displayName = "Base Color"
+                    doc = "This is the albedo base color"
+                    hidden = false
+                    renderType = "color"
                 )
                 color3f inputs:emissive_color = (1, 1, 1) (
                     customData = {

@@ -18,11 +18,11 @@ def Xform "DeskSurface" (
     {
         def Material "desk_surface_Material"
         {
-            token outputs:mdl:displacement.connect = </DeskSurface/Looks/desk_surface_Material/DeskShader.outputs:out>
-            token outputs:mdl:surface.connect = </DeskSurface/Looks/desk_surface_Material/DeskShader.outputs:out>
-            token outputs:mdl:volume.connect = </DeskSurface/Looks/desk_surface_Material/DeskShader.outputs:out>
+            token outputs:mdl:displacement.connect = </DeskSurface/Looks/desk_surface_Material/desk_surface_Shader.outputs:out>
+            token outputs:mdl:surface.connect = </DeskSurface/Looks/desk_surface_Material/desk_surface_Shader.outputs:out>
+            token outputs:mdl:volume.connect = </DeskSurface/Looks/desk_surface_Material/desk_surface_Shader.outputs:out>
 
-            def Shader "DeskShader"
+            def Shader "desk_surface_Shader"
             {
                 uniform token info:implementationSource = "sourceAsset"
                 uniform asset info:mdl:sourceAsset = @OmniPBR.mdl@
@@ -37,6 +37,9 @@ def Xform "DeskSurface" (
                     }
                     displayGroup = "Albedo"
                     displayName = "Base Color"
+                    doc = "This is the albedo base color"
+                    hidden = false
+                    renderType = "color"
                 )
                 color3f inputs:emissive_color = (1, 1, 1) (
                     customData = {
