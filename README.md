@@ -1,9 +1,14 @@
-# Arm Simulation Environment Set Up
-This repository is designed for setting up an environment for training robotics arm to grab objects in Isaac Sim. The goal is to guide through developers to design their own task for the arm to train using examples files.
-
 <p align="center">
 <img src="photos/environment-example1.png" alt="Task Demo" width="800"/>
 </p>
+
+[![IsaacSim](https://img.shields.io/badge/IsaacSim-5.0.0-silver.svg)](https://docs.isaacsim.omniverse.nvidia.com/latest/index.html)
+[![Python](https://img.shields.io/badge/python-3.11-blue.svg)](https://docs.python.org/3/whatsnew/3.11.html)
+[![Linux platform](https://img.shields.io/badge/platform-linux--64-orange.svg)](https://releases.ubuntu.com/22.04/)
+
+
+# Arm Simulation Environment Set Up
+This repository is designed for setting up an environment for training robotics arm to grab objects in Isaac Sim. The goal is to guide through developers to design their own task for the arm to train using examples files.
 
 ## Getting Started
 
