@@ -36,6 +36,13 @@ def main():
     print("Name of the task: ")
     task_folder = sys.stdin.readline().strip()
 
+    ROOT = Path(__file__).resolve().parents[1]
+    TASKS_DIR = (ROOT / "tasks").resolve()
+    task_folder = Path(task_folder).expanduser().resolve()
+
+    if task_folder.is_relative_to(TASKS_DIR):
+        raise SystemExit(f"[!] {task_folder} is not inside {TASKS_DIR}")
+
     # Initialize the simulation context
     sim_cfg = sim_utils.SimulationCfg(dt=0.01, device=args_cli.device)
     sim = sim_utils.SimulationContext(sim_cfg)
