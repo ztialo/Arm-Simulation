@@ -8,12 +8,12 @@
 
 
 # Arm Simulation Environment Set Up
-This repository is designed for setting up an environment for training robotics arm to grab objects in Isaac Sim. The goal is to guide through developers to design their own task for the arm to train using examples files.
+This repository is designed for setting up an environment for training robotics arms to grab objects in Isaac Sim. The goal is to guide developers to design their own task for the arm to train using example files.
 
 ## Getting Started
 
 ### 1. Clone the Repository
-Suggesting cloning the repository in the same directory of your IsaacLab folder
+Suggest cloning the repository in the same directory as your IsaacLab folder
 
 ```
 git@github.com:ztialo/Arm-Simulation.git
@@ -27,8 +27,8 @@ Find the `isaaclab.sh` file in your `IssacSim -> IssacLab` folder, it could be s
 ```
 Make sure you are using the right Python environment
 
-### 3. Inset the correct task name
-After the Isaac Sim app started up, in the terminal it will ask you the name of the task that you want to run. Type in the task folder name that you would want to run.
+### 3. Insert the correct task name
+After the Isaac Sim app has started up, in the terminal, it will ask you the name of the task that you want to run. Type in the task folder name that you would want to run.
 Task folder names can be found in `/Arm-Simulation/arm/tasks`
 
 
